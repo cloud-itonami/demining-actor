@@ -3,7 +3,7 @@
 `cloud-itonami/demining-actor` holds the **actor identity and the pure `.cljc` planning
 boundary** for a Humanitarian Mine Action (HMA) agent: who this actor is
 (`actor-manifest.jsonld`, `.well-known/did.json`) and, given a set of gate attestations,
-**what records it would write** (`src/demining/murakumo.cljc`).
+**what records it would write** (`src/demining/murakumo.cljk`).
 
 It plans. It does not execute. `cell-plan` returns a `:blocked` or `:ready` value
 containing `:mst/put-record` effect *descriptions*; nothing in this repository opens a
@@ -42,8 +42,8 @@ demoted to Tier 1 only on a Land Release decision. The full invariant list is in
 |---|---|
 | `actor-manifest.jsonld` | Actor definition: 8-way path-based Multi-DID composition, 5 capabilities, 3 pipelines, `pipelineGate.validateScope`, the convo system prompt |
 | `.well-known/did.json` | `did:web:etzhayyim.com:actor:demining` — PDS and appview service endpoints |
-| `src/demining/murakumo.cljc` | The planning boundary: `cell-specs`, `missing-gates`, `records-for`, `cell-plan`, `all-cell-plans` |
-| `test/demining/murakumo_test.cljc` | 9 contract tests / 57 assertions. Introspects `cell-specs` rather than hardcoding cell names, so it holds as the manifest changes |
+| `src/demining/murakumo.cljk` | The planning boundary: `cell-specs`, `missing-gates`, `records-for`, `cell-plan`, `all-cell-plans` |
+| `test/demining/murakumo_test.cljk` | 9 contract tests / 57 assertions. Introspects `cell-specs` rather than hardcoding cell names, so it holds as the manifest changes |
 | `CLAUDE.md` | The five actor invariants, and the DID → IMAS-series role table |
 | `storage-profile.edn` | Declares the local-agent kagi-chunked storage profile |
 

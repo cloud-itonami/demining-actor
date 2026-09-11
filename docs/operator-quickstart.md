@@ -50,7 +50,7 @@ thing standing between "a gate was not attested" and "the record was planned any
 
 ## 2. Check that the manifest and the cljc scaffold still agree
 
-`actor-manifest.jsonld` declares the pipelines; `cell-specs` in `src/demining/murakumo.cljc`
+`actor-manifest.jsonld` declares the pipelines; `cell-specs` in `src/demining/murakumo.cljk`
 declares the planning cells. **Nothing generates one from the other**, so they can drift.
 This is the check that catches it, and it is the check most worth running after editing
 either file.
@@ -137,7 +137,7 @@ Expected — **exit 0 with one warning**, which is the current state of the tree
 failure:
 
 ```
-src/demining/murakumo.cljc:75:14: warning: unused binding input
+src/demining/murakumo.cljk:75:14: warning: unused binding input
 linting took 5229ms, errors: 0, warnings: 1
 ```
 
