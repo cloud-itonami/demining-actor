@@ -31,7 +31,7 @@ cat > /tmp/dm-run.cljs <<'EOF'
             [demining.murakumo-test]))
 (t/run-tests 'demining.murakumo-test)
 EOF
-nbb --classpath "src:test" /tmp/dm-run.cljs
+kbb --backend sci --classpath "src:test" /tmp/dm-run.cljs
 ```
 
 Expected — exit 0, about 2 seconds:
@@ -79,7 +79,7 @@ cat > /tmp/dm-agree.cljs <<'EOF'
                  (str "FAIL " bad " disagreement(s)")))
     (js/process.exit (if (zero? bad) 0 1))))
 EOF
-nbb --classpath "src" /tmp/dm-agree.cljs
+kbb --backend sci --classpath "src" /tmp/dm-agree.cljs
 ```
 
 Expected — exit 0:
@@ -107,7 +107,7 @@ the only thing that can.
 `deps.edn` declares `:test` with the cognitect test-runner. This is what CI would run.
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
 
 Expected — exit 0, identical counts to step 1:
@@ -130,7 +130,7 @@ one when you specifically need to know that the *declared* alias works.
 ## 4. Lint
 
 ```sh
-clojure -M:lint
+kbb -M:lint
 ```
 
 Expected — **exit 0 with one warning**, which is the current state of the tree and not a
