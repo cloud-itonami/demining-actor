@@ -34,7 +34,7 @@ Convention (Ottawa, 1997), the Convention on Cluster Munitions, CCW Protocol V, 
 coordinates of an *uncleared* hazardous area endangers civilians (IMAS 05.10). Uncleared
 SHA/CHA polygons and victim PII are Tier 3 and never enter the public record; a polygon is
 demoted to Tier 1 only on a Land Release decision. The full invariant list is in
-`CLAUDE.md` and is not restated here — one copy, so the two cannot drift.
+`AGENTS.md` and is not restated here — one copy, so the two cannot drift.
 
 ## What is actually in this repository
 
@@ -44,7 +44,7 @@ demoted to Tier 1 only on a Land Release decision. The full invariant list is in
 | `.well-known/did.json` | `did:web:etzhayyim.com:actor:demining` — PDS and appview service endpoints |
 | `src/demining/murakumo.cljk` | The planning boundary: `cell-specs`, `missing-gates`, `records-for`, `cell-plan`, `all-cell-plans` |
 | `test/demining/murakumo_test.cljk` | 9 contract tests / 57 assertions. Introspects `cell-specs` rather than hardcoding cell names, so it holds as the manifest changes |
-| `CLAUDE.md` | The five actor invariants, and the DID → IMAS-series role table |
+| `AGENTS.md` | The five actor invariants, and the DID → IMAS-series role table |
 | `storage-profile.edn` | Declares the local-agent kagi-chunked storage profile |
 
 ## The shape of the boundary
