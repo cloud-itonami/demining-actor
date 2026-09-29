@@ -1,6 +1,6 @@
 # 20-actors/demining
 
-Humanitarian Mine Action actor (T1 MCP-Compose). See `60-apps/etzhayyim-project-demining/CLAUDE.md` for project-level design; this file documents actor-manifest-level invariants.
+Humanitarian Mine Action actor (T1 MCP-Compose). See `60-apps/etzhayyim-project-demining/AGENTS.md` for project-level design; this file documents actor-manifest-level invariants.
 
 ## Actor composition (path-based Multi-DID)
 
